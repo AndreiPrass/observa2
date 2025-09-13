@@ -1,0 +1,12 @@
+[
+  {
+    "id": "noticia1",
+    "titulo": "ODS 12 – Consumo e Produção Responsáveis",
+    "conteudo": "Empresa lança ‘pizza reciclável’: massa comestível, embalagem comestível e queijo vegano. Especialistas dizem que comer a caixa é 100% sustentável, mas confessa-se: difícil parar no primeiro pedaço!"
+  },
+  {
+    "id": "noticia2",
+    "titulo": "ODS 15 – Vida Terrestre",
+    "conteudo": "Chimpanzés fazem participação especial na COP30: Representando a floresta tropical, os primatas surpreenderam diplomatas ao exigir mais árvores e menos poluição. Uma das estrelas do evento roubou a cena ao tentar ‘negociar’ bananas como moeda de carbono."
+  }
+]

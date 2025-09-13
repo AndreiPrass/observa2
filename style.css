@@ -1,0 +1,358 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ededed;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    top: 50px; /* ajusta para o ponto original */
+    left: 2%;   /* mesma posição horizontal do desktop */
+    transform: translate(0, 0); /* remove o centralizar automático */
+}
+
+
+/* Retângulo do cabeçalho */
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #010037;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+/* Menu e título à esquerda */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Título */
+.header-box h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Menu */
+.header-box nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Links do menu como botões */
+.header-box nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #010037;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header-box nav a:hover {
+    background-color: #8a8a8a;
+    color: #ffffff;
+}
+
+/* Botão à direita */
+.header-btn {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #010037;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* Recuo do primeiro link do menu (desktop) */
+.header-box nav ul li:first-child a {
+    margin-left: 40px;
+}
+
+/* Sessões */
+.first-section,
+.second-section,
+.third-section {
+    position: relative;
+    margin: 50px auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #ededed;
+    border-radius: 20px;
+    padding: 50px 0;
+    height: 600px;
+}
+
+/* Imagens flutuantes das sessões (desktop) */
+.first-section .floating-img {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 900px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.second-section .floating-img {
+    position: absolute;
+    top: 0px;
+    left: 16px;
+    width: 1100px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.third-section .floating-img {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 930px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* --------------------------- */
+/* RESPONSIVO (celular e tablet) */
+/* --------------------------- */
+@media screen and (max-width: 768px) {
+
+    /* Cabeçalho */
+    .header-box {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header-left ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header-btn {
+        width: 100%;
+    }
+
+    .logo {
+        width: 70px;    /* reduz tamanho da logo */
+        height: auto;
+        top: 50px;      /* mantém aproximadamente a posição vertical proporcional */
+        left: 2%;       /* mantém distância do canto esquerdo */
+    }
+
+
+    /* Remove recuo do primeiro link no menu */
+    .header-box nav ul li:first-child a {
+        margin-left: 0;
+    }
+
+    /* Sessões */
+    .first-section,
+    .second-section,
+    .third-section {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    /* Imagens flutuantes das sessões */
+    .first-section .floating-img,
+    .second-section .floating-img,
+    .third-section .floating-img {
+        position: relative;
+        width: 90%;
+        max-width: 400px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/* ===============================
+   Estilo base para todas as seções
+   =============================== */
+.secao {
+    position: relative;
+    margin: 20px auto 50px auto;
+    width: 80%;
+    max-width: 1200px;
+    background-color: #ededed;
+    border-radius: 20px;
+    padding: 50px;  /* espaçamento interno */
+    box-sizing: border-box;
+    height: 650px;  /* altura fixa */
+}
+
+
+/* ===============================
+   Imagem flutuante da primeira seção
+   =============================== */
+.secao-1 .floating-img {
+    position: absolute;         /* Permite posicionar em qualquer lugar da seção */
+    top: 0px;                  /* Distância do topo da seção */
+    left: 10px;                /* Distância da borda esquerda */
+    width: 1500px;               /* Largura da imagem (ajustável) */
+    height: auto;               /* Mantém proporção */
+    border-radius: 20px;        /* Bordas arredondadas da imagem */
+    max-width: 100%;            /* Evita que a imagem ultrapasse a largura da seção */
+}
+
+/* Imagem flutuante da segunda seção */
+.secao-2 .floating-img {
+    position: absolute;         /* Permite posicionar em qualquer lugar da seção */
+    top: 0px;                  /* Distância do topo da seção */
+    left: 10px;                 /* Distância da borda esquerda */
+    width: 3000px;              /* Largura da imagem (ajustável) */
+    height: auto;               /* Mantém proporção */
+    border-radius: 20px;        /* Bordas arredondadas da imagem */
+    max-width: 100%;            /* Evita que a imagem ultrapasse a largura da seção */
+}
+/* Seção 3: notícias */
+.secao-3 {
+    position: relative;           /* permite posicionar elementos dentro */
+    margin: 50px auto;            /* distância da seção em relação a outras */
+    width: 80%;                   /* largura da seção */
+    max-width: 1200px;            /* não fica maior que 1200px */
+    height: 400px;                /* altura da seção (ajustável) */
+    border-radius: 20px;
+}
+
+/* Fundo das notícias (imagem editável) */
+.secao-3 .fundo-noticias {
+    position: absolute;           
+    top: 0;                       
+    left: -100px;                  
+    width: 120%;                  
+    height: 180%;                 
+    background-image: url('Página_Inicial/I3.png'); 
+    background-size: cover;       
+    background-position: center;  
+    border-radius: 20px;
+    z-index: 0;                   
+}
+
+/* Container das notícias */
+.secao-3 .noticias {
+    position: relative;           
+    display: flex;                /* coloca as notícias lado a lado */
+    gap: 20px;                    /* espaço entre elas */
+    padding: 20px;
+    z-index: 1;                   
+}
+
+/* Cada notícia (base para as duas) */
+.noticia {
+    flex: 1;                      /* ocupa espaço igual */
+    border-radius: 10px;
+    padding-top: 80px;            /* distância do topo */
+    padding-right: 20px;          /* espaço da direita */
+    max-width: 550px;             /* limite horizontal do texto */
+    color: #ffffff;               
+    box-sizing: border-box;       /* padding conta dentro da largura */
+}
+
+/* Primeira notícia: recuo da esquerda */
+.noticia:first-child {
+    padding-left: 40px;          /* distância do lado esquerdo da seção */
+}
+
+/* Segunda notícia: recuo da esquerda */
+.noticia:last-child {
+    padding-left: 210px;           /* distância do lado esquerdo da seção */
+}
+
+/* Títulos */
+.noticia h3 {
+    margin: 0 0 10px 0;            /* margem: topo 0, baixo 10px */
+    max-width: 100%;               /* limita largura dentro do card */
+    word-wrap: break-word;         /* quebra linhas se necessário */
+}
+
+/* Parágrafos */
+.noticia p {
+    margin: 20px;
+    max-width: 100%;               
+    word-wrap: break-word;         
+    line-height: 1.5;              
+}
+
+/* Hover das notícias */
+.noticia:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .noticias {
+        flex-direction: column;    /* empilha as notícias no celular */
+        gap: 20px;                 /* mantém espaço entre elas */
+    }
+
+    .noticia {
+        padding-left: 20px;        /* reduz recuo no mobile */
+        max-width: 100%;           /* ocupa toda a largura disponível */
+    }
+}
+
+/* Alinhamento do título e parágrafo da primeira notícia */
+.noticia:first-child h3,
+.noticia:first-child p {
+    text-align: justify;   /* opções: left, center, right, justify */
+}
+
+/* Alinhamento do título e parágrafo da segunda notícia */
+.noticia:last-child h3,
+.noticia:last-child p {
+    text-align: justify;   /* você pode colocar center ou right se quiser */
+}
+
+/* Inicial: fade-in ao carregar */
+body {
+    opacity: 0;                  /* começa invisível */
+    transition: opacity 0.5s ease; /* duração e suavidade da transição */
+}
+
+/* Classe aplicada no DOMContentLoaded */
+body.fade-in {
+    opacity: 1;                  /* aparece suavemente */
+}
+
+/* Classe aplicada ao clicar no link */
+body.fade-out {
+    opacity: 0;                  /* desaparece suavemente */
+}

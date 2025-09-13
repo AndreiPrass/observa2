@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observatório do Clima</title>
+    <link rel="stylesheet" href="style.css"> <!-- conecta o CSS -->
+</head>
+<body>
+
+<!-- Cabeçalho -->
+<header>
+  <!-- Logo -->
+  <img src="logo.png" alt="Logo do projeto" class="logo">
+
+  <!-- Retângulo do cabeçalho -->
+  <div class="header-box">
+    <!-- Menu e título à esquerda -->
+    <div class="header-left">
+      <nav>
+        <ul>
+          <li><a href="educação.html" class="transition-link">Educação</a></li>
+          <li><a href="Estações.html" class="transition-link">Estações</a></li>
+          <li><a href="Simulações.html" class="transition-link">Simulações</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Botão à direita -->
+    <a href="index.html" class="header-btn transition-link">Página inicial</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Seção 1 -->
+  <section class="secao secao-1">
+    <img src="Página_Inicial/I1.png" alt="Elemento decorativo" class="floating-img">
+  </section>
+
+  <!-- Seção 2 -->
+  <section class="secao secao-2">
+    <img src="Página_Inicial/I2.png" alt="Elemento decorativo" class="floating-img">
+  </section>
+
+<!-- Seção 3: Notícias -->
+<section class="secao secao-3">
+    <!-- Fundo da seção -->
+    <div class="fundo-noticias"></div>
+
+    <!-- Notícias -->
+    <div class="noticias">
+        <div class="noticia" id="noticia1"></div>
+        <div class="noticia" id="noticia2"></div>
+    </div>
+</section>
+
+
+</main>
+<script src="transicao.js" defer></script>
+<script src="noticias.js"></script>
+</body>
+
+</html>
