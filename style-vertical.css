@@ -309,3 +309,45 @@ header {
 .noticia a:hover {
     color: #ffffff;
 }
+
+/* ===============================
+   Primeira imagem (11s)
+   =============================== */
+.first-section .floating-img {
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    width: 340px;
+    height: auto;
+    border-radius: 20px;
+    max-width: 100%;
+    z-index: 1;
+}
+
+/* ===============================
+   Segunda imagem (12s)
+   =============================== */
+.second-section .floating-img {
+    position: absolute;
+    top: 410px;
+    left: 5px;
+    width: 490px;
+    height: auto;
+    border-radius: 20px;
+    max-width: 100%;
+    z-index: 1;
+}
+
+/* ===============================
+   Terceira imagem (13s)
+   =============================== */
+.third-section .floating-img {
+    position: absolute;
+    top: 650px;
+    left: 35px;
+    width: 330px;
+    height: auto;
+    border-radius: 20px;
+    max-width: 100%;
+    z-index: 1;
+}
