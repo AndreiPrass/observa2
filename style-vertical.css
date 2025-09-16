@@ -1,0 +1,311 @@
+/* ===============================
+   RESET BÁSICO
+   =============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   FUNDO DA PÁGINA
+   =============================== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ededed;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+body.fade-out {
+    opacity: 0;
+}
+/* ===============================
+   CABEÇALHO
+   =============================== */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 10%;
+    top: 50px;
+    left: 2%;
+}
+
+/* Caixa do cabeçalho */
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Dimensões editáveis */
+    width: 370px;        /* largura */
+    height: 60px;        /* altura */
+
+    max-width: 100%;     /* evita quebrar em telas pequenas */
+    background-color: #010037;
+    color: white;
+
+    /* Espaçamentos */
+    padding: 8px;       /* espaço interno */
+    margin-left: -7px;   /* recuo da esquerda */
+    margin-top: 10px;    /* recuo do topo (opcional) */
+
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+/* Área da esquerda do cabeçalho (logo + título) */
+.header-left {
+    display: flex;
+    align-items: center;     /* alinha verticalmente os itens */
+    justify-content: flex-start; /* alinhamento horizontal */
+    gap: 40px;               /* espaço entre logo e título */
+    margin-left: 60px;       /* recuo do bloco da esquerda */
+}
+
+/* Título dentro do header */
+.header-box h1 {
+    font-size: 10px;         /* tamanho do texto */
+    font-weight: bold;       /* peso da fonte */
+    color: white;            /* cor do título */
+    margin: 0;               /* remove espaçamentos padrão */
+    letter-spacing: 1px;     /* espaçamento entre letras */
+    text-transform: none;    /* uppercase / lowercase, se quiser mudar */
+}
+
+/* Lista de navegação */
+.header-box nav ul {
+    list-style: none;        /* tira as bolinhas da lista */
+    display: flex;           /* coloca itens lado a lado */
+    gap: 20px;               /* espaço entre os itens */
+    margin: 0;               /* zera margens */
+    padding: 0;              /* zera padding */
+}
+
+/* Links de navegação */
+.header-box nav a {
+    display: inline-block;
+    padding: 10px 10px;      /* espaçamento interno do botão */
+    background-color: #ffffff; /* cor de fundo */
+    color: #010037;          /* cor do texto */
+    text-decoration: none;   /* remove o sublinhado */
+    font-weight: bold;
+    font-size: 8px;         /* tamanho da fonte */
+    border-radius: 8px;      /* bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* sombra opcional */
+    margin-top: 5px;        /* recuo do topo (opcional) */
+}
+
+/* Efeito hover nos links */
+.header-box nav a:hover {
+    background-color: #8a8a8a; /* cor de fundo no hover */
+    color: #ffffff;            /* cor do texto no hover */
+}
+
+/* Botão separado (lado direito do cabeçalho) */
+.header-btn {
+    padding: 10px 10px;        /* espaçamento interno */
+    background-color: #ffffff; /* cor de fundo */
+    color: #010037;            /* cor do texto */
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;   /* remove o sublinhado */
+    font-size: 8px;
+    cursor: pointer;
+    margin-left: auto;         /* empurra para o extremo direito */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-top: 4px;          /* recuo do topo (opcional) */
+}
+
+.header-btn:hover {
+    background-color: #010037;
+    color: #ffffff;
+}
+
+/* Espaço específico para o primeiro item da lista (caso queira deslocar) */
+.header-box nav ul li:first-child a {
+    margin-left: 15px;   /* distância da borda esquerda */
+}
+
+
+/* ===============================
+   SEÇÕES BASE
+   =============================== */
+.secao {
+    position: relative;
+    margin: 20px auto 50px auto;
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff00;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto; /* altura automática no celular */
+}
+
+/* ===============================
+   IMAGENS ESPECÍFICAS POR PÁGINA
+   =============================== */
+
+/* Página 1 */
+.secao-1 .floating-img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Página 2 */
+.secao-2 .floating-img {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* Página 3 */
+.secao-3 .floating-img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+    border-radius: 20px;
+}
+/* ===============================
+   NOTÍCIAS
+   =============================== */
+.secao-3 {
+    position: relative;
+    top: 400px;
+    margin: 0px auto;
+    width: 100%;
+    max-width: 1000px;
+    height: auto; /* altura automática para celular */
+    border-radius: 20px;
+    overflow: hidden; /* garante que imagens de fundo não vaze */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* sombra suave na seção */
+}
+
+/* Fundo das notícias */
+.secao-3 .fundo-noticias {
+    position: absolute;
+    top: 20px;
+    left: -10px;
+    width: 100%;
+    height: 250px; /* ajustável para celular */
+    background-image: url('Página_Inicial/I3.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    z-index: 0;
+
+}
+/* ===============================
+   NOTÍCIAS - CONTAINER GERAL
+   =============================== */
+.secao-3 {
+    position: relative;
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Fundo das notícias (imagem) */
+.secao-3 .fundo-noticias {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px; /* altura da área visível */
+    background-image: url('Página_Inicial/I3.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+/* ===============================
+   CONTAINER DAS NOTÍCIAS
+   =============================== */
+.secao-3 .noticias {
+    position: relative;
+    display: flex;
+    flex-direction: row;   /* coloca lado a lado */
+    flex-wrap: wrap;       /* quebra linha se faltar espaço */
+    justify-content: flex-start; /* ou center */
+    align-items: flex-start;
+    gap: 52px;             /* espaço entre notícias */
+    padding: 20px;
+    z-index: 1;
+}
+
+/* ===============================
+   NOTÍCIA INDIVIDUAL
+   =============================== */
+.noticia {
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;            /* apenas o texto */
+    text-shadow: none;      /* sem sombra */
+    background: none;       /* sem fundo */
+    border: none;           /* sem borda */
+    border-radius: 0;       /* remove arredondamento */
+    max-width: 130px;       /* largura máxima de cada notícia */
+    transition: transform 0.3s ease;
+}
+
+/* Hover opcional (pode remover) */
+.noticia:hover {
+    transform: scale(1.02);
+}
+
+/* ===============================
+   TÍTULOS
+   =============================== */
+.noticia h3 {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+/* ===============================
+   PARÁGRAFOS
+   =============================== */
+.noticia p {
+    font-size: 8px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+
+.noticia a:hover {
+    color: #ffffff;
+}

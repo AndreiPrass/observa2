@@ -143,65 +143,6 @@ header {
     border-radius: 20px;
 }
 
-/* --------------------------- */
-/* RESPONSIVO (celular e tablet) */
-/* --------------------------- */
-@media screen and (max-width: 768px) {
-
-    /* Cabeçalho */
-    .header-box {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 95%;
-        padding: 15px;
-    }
-
-    .header-left ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .header-btn {
-        width: 100%;
-    }
-
-    .logo {
-        width: 70px;    /* reduz tamanho da logo */
-        height: auto;
-        top: 50px;      /* mantém aproximadamente a posição vertical proporcional */
-        left: 2%;       /* mantém distância do canto esquerdo */
-    }
-
-
-    /* Remove recuo do primeiro link no menu */
-    .header-box nav ul li:first-child a {
-        margin-left: 0;
-    }
-
-    /* Sessões */
-    .first-section,
-    .second-section,
-    .third-section {
-        height: auto;
-        padding: 80px 20px;
-    }
-
-    /* Imagens flutuantes das sessões */
-    .first-section .floating-img,
-    .second-section .floating-img,
-    .third-section .floating-img {
-        position: relative;
-        width: 90%;
-        max-width: 400px;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        margin-bottom: 30px;
-    }
-}
-
 /* ===============================
    Estilo base para todas as seções
    =============================== */
@@ -314,19 +255,6 @@ header {
 .noticia:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .noticias {
-        flex-direction: column;    /* empilha as notícias no celular */
-        gap: 20px;                 /* mantém espaço entre elas */
-    }
-
-    .noticia {
-        padding-left: 20px;        /* reduz recuo no mobile */
-        max-width: 100%;           /* ocupa toda a largura disponível */
-    }
 }
 
 /* Alinhamento do título e parágrafo da primeira notícia */
